@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Header darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
         <Routes>
-          <Route path="/" element={<Home darkTheme={darkTheme} />} />
+          <Route path="/portfolio" element={<Home darkTheme={darkTheme} />} />
           <Route path="/About" element={<About darkTheme={darkTheme} />} />
           <Route path="/Contact" element={<Home darkTheme={darkTheme} />} />
         </Routes>
