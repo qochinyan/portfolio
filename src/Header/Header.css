@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+.innerHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    letter-spacing: 2px;
+    width: 90vw;
+    margin: 0 auto;
+}
+.headerBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  transition: .3s;
+  background: rgb(18, 18, 18);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.headerBox.light{
+    background: rgb(255, 255, 255);
+    border-color:rgb(36,36,36);
+}
+.headerBox ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 30vw;
+}
+/* controling theme changer */
+
+/* The themeChanger - the box around the slider */
+.themeChanger {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.themeChanger input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(36, 36, 36);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  
+}
+
+.themeChanger input:checked + .slider {
+  background:white;
+  border: 1px solid rgb(36, 36, 36);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: rgb(36, 36, 36);
+}
+.slider.round:before {
+  border-radius: 50%;
+}
