@@ -1,5 +1,5 @@
 .cont {
-  padding-top: 100px;
+  padding-top: 10%;
   width: 100vw;
   height: 100vh;
   background: rgb(13, 13, 13);
@@ -23,13 +23,14 @@
   width: 50%;
   height: 60vh;
   display: flex;
+  padding: 0 5% 0 0;
   align-items: center;
   justify-content: center;
   margin:0 auto;
 }
 .ovals {
   position: absolute;
-  z-index: 11;
+  z-index: 1;
   top: 550px;
   left: 40px;
   display: flex;
@@ -104,9 +105,26 @@
     width: 100vw;
     padding:0 0 0  0;
     text-align: center;
+    
   }
   .firstContentRight{
     width: 100vw;
     height: auto;
+    padding: 0 0 0 0;
+    z-index: 3;
+  }
+  .avatar{
+    border-radius: 0 0 0 0;
+  }
+  .avatar:hover {
+    width: 100%;
+    opacity: 0.8;
+  }
+  .cont{
+    padding: 2% 0 0 0 ;
+  }
+  .ovals {
+    top:50%;
+    left:-20%;
   }
 }
