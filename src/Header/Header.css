@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   font-family: "Montserrat", sans-serif;
   color: white;
   box-sizing: border-box;
+  font-weight: bold;
 }
 .innerHeader{
     display: flex;
@@ -12,17 +12,17 @@
     font-size: 25px;
     letter-spacing: 2px;
     margin: 0 auto;
+    width: 80vw;
 }
 .headerBox {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
-  padding: 0 10%;
-  width: 100vw;
+  z-index: 5555555;
+  width:100vw;
   transition: .3s;
   background: rgb(18, 18, 18);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 .headerBox.light{
     background: rgb(255, 255, 255);
@@ -179,7 +179,7 @@ input:checked + .slider:before {
   transform: rotate(-45deg) translate(-9px, 16px);
 }
 /* media */
-@media(max-width:700px){
+@media(max-width:800px){
   .burger{
     display: block;
 

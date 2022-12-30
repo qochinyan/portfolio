@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import About from "./Pages/About/About";
 import { useState } from "react";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/About" element={<About darkTheme={darkTheme} />} />
           <Route path="/Contact" element={<Home darkTheme={darkTheme} />} />
         </Routes>
+        <Footer darkTheme={darkTheme} />
       </div>
     </BrowserRouter>
   );
