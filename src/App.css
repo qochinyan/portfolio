@@ -1,3 +1,9 @@
+*{
+  user-select: none;
+}
 .App {
   position: relative;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
