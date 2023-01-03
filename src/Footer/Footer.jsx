@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import "./Footer.css";
-const Footer = ({ darkTheme }) => {
+const Footer = () => {
+  const darkTheme = useSelector(function(state){return state.darkTheme})
+
   return (
     <div
       className="footer-container"

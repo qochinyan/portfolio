@@ -1,22 +1,26 @@
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-const Header = ({ setDarkTheme, darkTheme }) => {
-  const handleCheck = (evt) => {
-    if (evt.target.checked) {
-      setDarkTheme(false);
-    } else {
-      setDarkTheme(true);
-    }
+import { useSelector, useDispatch } from "react-redux";
+const Header = () => {
+  const darkTheme = useSelector(function (state) {
+    return state.darkTheme;
+  });
+  const dispatch = useDispatch();
+  const menuOpen = useSelector(function (state) {
+    return state.menuIsOpen;
+  });
+  const handleCheck = () => {
+    dispatch({ type: "SET_THEME" });
   };
   return (
     <div className={darkTheme ? "headerBox" : "headerBox light"}>
       <div className="innerHeader">
         <label className="themeChanger">
           <input onClick={handleCheck} type="checkbox" />
-          <span class="slider round"></span>
+          <span className="slider round"></span>
         </label>
-        <div className={darkTheme ? "burger" : "light burger"}>
-        <input type="checkbox" />
+        <div onClick={()=>{dispatch({type:"SET_MENU_OPEN"})}} className={darkTheme ? "burger" : "light burger"}>
+          <input checked={menuOpen} type="checkbox" />
           <span></span>
           <span></span>
           <span></span>
@@ -24,40 +28,36 @@ const Header = ({ setDarkTheme, darkTheme }) => {
         <div className="list">
           <ul>
             <li>
-              <NavLink
-                to="/portfolio"
-                style={({ isActive }) => ({
-                  borderBottom: isActive ? "1px solid white" : "none",
-                  borderColor: darkTheme ? "white" : "black",
+              <a
+                href="#cont"
+                style={{
                   textDecoration: "none",
+                  borderColor: darkTheme ? "white" : "black",
                   color: darkTheme ? "white" : "rgb(36,36,36)",
-                })}>
+                }}>
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/About"
-                style={({ isActive }) => ({
-                  borderBottom: isActive ? "1px solid white" : "none",
+              <a
+                href="#skils"
+                style={{
                   textDecoration: "none",
                   borderColor: darkTheme ? "white" : "black",
                   color: darkTheme ? "white" : "rgb(36,36,36)",
-                })}>
-                About
-              </NavLink>
+                }}>
+                Skills
+              </a>
             </li>
             <li>
-              <NavLink
-                to="/Contact"
-                style={({ isActive }) => ({
-                  borderBottom: isActive ? "1px solid white" : "none",
+              <a
+                style={{
                   textDecoration: "none",
                   borderColor: darkTheme ? "white" : "black",
                   color: darkTheme ? "white" : "rgb(36,36,36)",
-                })}>
-                Contact
-              </NavLink>
+                }}>
+                Contacts
+              </a>
             </li>
           </ul>
         </div>

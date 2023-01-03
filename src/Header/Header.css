@@ -1,41 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   font-family: "Montserrat", sans-serif;
   color: white;
   box-sizing: border-box;
   font-weight: bold;
 }
-.innerHeader{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 25px;
-    letter-spacing: 2px;
-    margin: 0 auto;
-    width: 80vw;
+.innerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 80vw;
 }
 .headerBox {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5555555;
-  width:100vw;
-  transition: .3s;
+  width: 100vw;
+  transition: 0.3s;
   background: rgb(18, 18, 18);
   border-bottom: 3px solid rgb(255, 255, 255);
 }
-.headerBox.light{
-    background: rgb(255, 255, 255);
-    border-color:rgb(36,36,36);
+.headerBox.light {
+  background: rgb(255, 255, 255);
+  border-color: rgb(36, 36, 36);
 }
 .headerBox ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  
 }
-.headerBox .list{
+.headerBox ul li {
+  cursor: pointer;
+}
+.headerBox .list {
   width: 50%;
   font-size: 24px;
 }
@@ -81,11 +83,10 @@
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  
 }
 
 .themeChanger input:checked + .slider {
-  background:white;
+  background: white;
   border: 1px solid rgb(36, 36, 36);
 }
 
@@ -99,65 +100,58 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /* burger                =============       */
-.burger{
+.burger {
   display: none;
   position: relative;
 
-  
-  z-index: 1;
-  
+  z-index: 111221111;
+
   -webkit-user-select: none;
   user-select: none;
 }
-.light.burger span{
+.light.burger span {
   background-color: rgb(36, 36, 36);
 }
-.burger span
-{
+.burger span {
   display: block;
   width: 40px;
   height: 5px;
   margin-bottom: 6px;
   position: relative;
-  
+
   background: #ffffff;
   border-radius: 1px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-.burger input
-{
+.burger input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
-  opacity: 0  ; /* hide this */
+
+  opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
-  .burger span:first-child
-  {
-    transform-origin: 0% 0%;
-  }
+.burger span:first-child {
+  transform-origin: 0% 0%;
+}
 
-.burger span:nth-last-child(2)
-{
+.burger span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-.burger input:checked ~ span
-{
+.burger input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-9px, -16px);
 }
@@ -165,8 +159,7 @@ input:checked + .slider:before {
 /*
  * But let's hide the middle one.
  */
-.burger input:checked ~ span:nth-last-child(3)
-{
+.burger input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -174,20 +167,18 @@ input:checked + .slider:before {
 /*
  * Ohyeah and the last one should go the other direction
  */
-.burger input:checked ~ span:nth-last-child(2)
-{
+.burger input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(-9px, 16px);
 }
 /* media */
-@media(max-width:800px){
-  .burger{
+@media (max-width: 800px) {
+  .burger {
     display: block;
-
   }
-  .list{
+  .list {
     display: none;
   }
-  .headerBox{
+  .headerBox {
     padding: 5% 5%;
   }
 }

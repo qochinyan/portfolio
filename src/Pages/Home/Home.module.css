@@ -1,5 +1,7 @@
 
-
+html{
+  scroll-behavior:smooth;
+}
 .cont {
   padding-top: 1%;
   /* max-width: 100vw; */
@@ -133,7 +135,7 @@
   }
   .ovals {
     top: 50%;
-    left: -28%;
+    left: -30%;
   }
   /* skills */
   .Skillscontent{

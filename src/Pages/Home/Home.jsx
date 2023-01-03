@@ -1,8 +1,15 @@
-import styles from "./Home.module.css";
+import { useSelector } from "react-redux";
 
-const Home = ({ darkTheme }) => {
+import styles from "./Home.module.css";
+const Home = () => {
+  const darkTheme = useSelector(function (state) {
+    return state.darkTheme;
+  });
+
   return (
-    <div className={darkTheme ? styles.cont : `${styles.cont} ${styles.light}`}>
+    <div
+      id="cont"
+      className={darkTheme ? styles.cont : `${styles.cont} ${styles.light}`}>
       <div className={styles.ovals}>
         <div
           className={
@@ -17,7 +24,7 @@ const Home = ({ darkTheme }) => {
             darkTheme ? styles.oval3 : `${styles.oval3} ${styles.bgBlack}`
           }></div>
       </div>
-      <content className={styles.firstContent}>
+      <div className={styles.firstContent}>
         <div className={styles.firstContentLeft}>
           <span
             className={
@@ -32,7 +39,7 @@ const Home = ({ darkTheme }) => {
                 ? styles.headNext
                 : `${styles.headNext} ${styles.colBlack}`
             }>
-            <b style={{ "font-size": "50px" }}>I</b>'m Aren
+            <b style={{ fontSize: "50px" }}>I</b>'m Aren
           </span>
         </div>
         <div className={styles.firstContentRight}>
@@ -43,8 +50,8 @@ const Home = ({ darkTheme }) => {
             alt=""
           />
         </div>
-      </content>
-      <div className={`${styles.webContainer} ${styles.skills}`}>
+      </div>
+      <div id="skills" className={`${styles.webContainer} ${styles.skills}`}>
         <h1
           className={
             darkTheme
@@ -54,47 +61,56 @@ const Home = ({ darkTheme }) => {
           Skills
         </h1>
         <div className={styles.Skillscontent}>
-          <div className={`${styles.col} ${styles.topSkill}`} style={{borderColor:darkTheme?"white":"rgb(36, 36, 36)"}}>
+          <div
+            className={`${styles.col} ${styles.topSkill}`}
+            style={{ borderColor: darkTheme ? "white" : "rgb(36, 36, 36)" }}>
             <ul className={styles.skill}>
-              <li >
+              <li>
                 <span className={`${styles.expand} ${styles.html5}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>HTML</em>
+                <em className={!darkTheme ? styles.colBlack : null}>HTML</em>
               </li>
               <li>
                 <span className={`${styles.expand} ${styles.css3}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>CSS</em>
+                <em className={!darkTheme ? styles.colBlack : null}>CSS</em>
               </li>
               <li>
                 <span className={`${styles.expand} ${styles.figma}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>Figma</em>
+                <em className={!darkTheme ? styles.colBlack : null}>Figma</em>
               </li>
               <li>
                 <span className={`${styles.expand} ${styles.js}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>JavaScript</em>
+                <em className={!darkTheme ? styles.colBlack : null}>
+                  JavaScript
+                </em>
               </li>
               <li>
                 <span className={`${styles.expand} ${styles.react}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>React</em>
+                <em className={!darkTheme ? styles.colBlack : null}>React</em>
               </li>
             </ul>
-            
           </div>
           <div className={styles.col}>
             <ul className={styles.skill}>
               <li>
-                <span className={`${styles.expand} ${styles.git} ${styles.rightSkill}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>Git / GitHub</em>
+                <span
+                  className={`${styles.expand} ${styles.git} ${styles.rightSkill}`}></span>
+                <em className={!darkTheme ? styles.colBlack : null}>
+                  Git / GitHub
+                </em>
               </li>
               <li>
-                <span className={`${styles.expand} ${styles.ts} ${styles.rightSkill}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>TypeScript</em>
+                <span
+                  className={`${styles.expand} ${styles.ts} ${styles.rightSkill}`}></span>
+                <em className={!darkTheme ? styles.colBlack : null}>
+                  TypeScript
+                </em>
               </li>
               <li>
-                <span className={`${styles.expand} ${styles.redux} ${styles.rightSkill}`}></span>
-                <em className={!darkTheme ?  styles.colBlack : null}>Redux</em>
+                <span
+                  className={`${styles.expand} ${styles.redux} ${styles.rightSkill}`}></span>
+                <em className={!darkTheme ? styles.colBlack : null}>Redux</em>
               </li>
             </ul>
-            
           </div>
         </div>
       </div>
