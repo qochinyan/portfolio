@@ -40,7 +40,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#skils"
+                href="#skills"
                 style={{
                   textDecoration: "none",
                   borderColor: darkTheme ? "white" : "black",
