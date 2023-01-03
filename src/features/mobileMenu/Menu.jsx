@@ -25,29 +25,20 @@ const Menu = () => {
           <li>
             <a
               href="#cont"
-              onClick={handleMenuOpen}
-              style={{
-                color: darkTheme ? "white" : "rgb(36,36,36)",
-              }}>
+              onClick={handleMenuOpen}>
               Home
             </a>
           </li>
           <li>
             <a
               href="#skills"
-              onClick={handleMenuOpen}
-              style={{
-                color: darkTheme ? "white" : "rgb(36,36,36)",
-              }}>
+              onClick={handleMenuOpen}>
               Skills
             </a>
           </li>
           <li>
             <a
-              onClick={handleMenuOpen}
-              style={{
-                color: darkTheme ? "white" : "rgb(36,36,36)",
-              }}>
+              onClick={handleMenuOpen}>
               Contacts
             </a>
           </li>
