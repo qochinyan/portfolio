@@ -38,6 +38,7 @@ const Menu = () => {
           </li>
           <li>
             <a
+            href="#contacts"
               onClick={handleMenuOpen}>
               Contacts
             </a>

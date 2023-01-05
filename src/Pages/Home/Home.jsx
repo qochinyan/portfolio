@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 
-import styles from "./Home.module.css";
+import insta from "../../insta.png"
+import face from "../../face.png"
+import styles from "./Home.module.scss";
 const Home = () => {
   const darkTheme = useSelector(function (state) {
     return state.darkTheme;
@@ -112,6 +114,22 @@ const Home = () => {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div
+        id="contacts"
+        className={`${styles.webContainer} ${styles.contacts}`}>
+        <h1
+          className={
+            darkTheme
+              ? `${styles.skillsHead}`
+              : `${styles.skillsHead} ${styles.colBlack}`
+          }>
+          Contacts
+        </h1>
+        <div className={styles.contactsCont}>
+          <a target="_blank" href="https://www.instagram.com/qochinyan.707/"><img src={insta} alt="" /></a>
+          <a target="_blank" href="https://www.facebook.com/qochh/"><img src={face} alt="" /></a>
         </div>
       </div>
     </div>

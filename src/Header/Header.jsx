@@ -19,7 +19,11 @@ const Header = () => {
           <input onClick={handleCheck} type="checkbox" />
           <span className="slider round"></span>
         </label>
-        <div onClick={()=>{dispatch({type:"SET_MENU_OPEN"})}} className={darkTheme ? "burger" : "light burger"}>
+        <div
+          onClick={() => {
+            dispatch({ type: "SET_MENU_OPEN" });
+          }}
+          className={darkTheme ? "burger" : "light burger"}>
           <input checked={menuOpen} type="checkbox" />
           <span></span>
           <span></span>
@@ -51,6 +55,7 @@ const Header = () => {
             </li>
             <li>
               <a
+                href="#contacts"
                 style={{
                   textDecoration: "none",
                   borderColor: darkTheme ? "white" : "black",
