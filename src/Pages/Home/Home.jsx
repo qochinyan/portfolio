@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
 
-import insta from "../../insta.png"
-import face from "../../face.png"
+import insta from "../../images/insta.png"
+import face from "../../images/face.png"
+import github from "../../images/github.png"
+import In from "../../images/in.png"
 import styles from "./Home.module.scss";
 const Home = () => {
   const darkTheme = useSelector(function (state) {
@@ -130,6 +132,8 @@ const Home = () => {
         <div className={styles.contactsCont}>
           <a target="_blank" href="https://www.instagram.com/qochinyan.707/"><img src={insta} alt="" /></a>
           <a target="_blank" href="https://www.facebook.com/qochh/"><img src={face} alt="" /></a>
+          <a target="_blank" href="https://www.github.com/qochinyan"><img src={github} alt="" /></a>
+          <a target="_blank" href="https://www.linkedin.com/in/aren-qochinyan-45b93924b/"><img src={In} alt="" /></a>
         </div>
       </div>
     </div>
