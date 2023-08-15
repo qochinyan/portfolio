@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.76a31926.css",
-    "main.js": "/portfolio/static/js/main.80918c46.js",
+    "main.css": "/portfolio/static/css/main.60884ffb.css",
+    "main.js": "/portfolio/static/js/main.be4fcfcc.js",
     "static/media/CV-Aren-Qochinyan.pdf": "/portfolio/static/media/CV-Aren-Qochinyan.057c0a5396114b225049.pdf",
     "static/media/insta.png": "/portfolio/static/media/insta.4a6b3d401b4a82774ae9.png",
+    "static/media/avatarold.jpg": "/portfolio/static/media/avatarold.fee00f97c55b6fea31f4.jpg",
     "static/media/github.png": "/portfolio/static/media/github.a9ceba79b6d49ba5b855.png",
     "static/media/face.png": "/portfolio/static/media/face.6a401069b321a644b318.png",
     "static/media/in.png": "/portfolio/static/media/in.bb94a0094e1798cf899e.png",
     "index.html": "/portfolio/index.html",
-    "main.76a31926.css.map": "/portfolio/static/css/main.76a31926.css.map",
-    "main.80918c46.js.map": "/portfolio/static/js/main.80918c46.js.map"
+    "main.60884ffb.css.map": "/portfolio/static/css/main.60884ffb.css.map",
+    "main.be4fcfcc.js.map": "/portfolio/static/js/main.be4fcfcc.js.map"
   },
   "entrypoints": [
-    "static/css/main.76a31926.css",
-    "static/js/main.80918c46.js"
+    "static/css/main.60884ffb.css",
+    "static/js/main.be4fcfcc.js"
   ]
 }
