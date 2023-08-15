@@ -1,12 +1,15 @@
 import { useSelector } from "react-redux";
 
+import avatar from "../../images/avatarold.jpg";
+
 import insta from "../../images/insta.png";
 import face from "../../images/face.png";
 import github from "../../images/github.png";
 import In from "../../images/in.png";
 
-import CV from "../../Files/CV-Aren-Qochinyan.pdf"
+import CV from "../../Files/CV-Aren-Qochinyan.pdf";
 import styles from "./Home.module.scss";
+
 const Home = () => {
   const darkTheme = useSelector(function (state) {
     return state.darkTheme;
@@ -15,27 +18,32 @@ const Home = () => {
   return (
     <div
       id="cont"
-      className={darkTheme ? styles.cont : `${styles.cont} ${styles.light}`}>
+      className={darkTheme ? styles.cont : `${styles.cont} ${styles.light}`}
+    >
       <div className={styles.ovals}>
         <div
           className={
             darkTheme ? styles.oval1 : `${styles.oval1} ${styles.bgBlack}`
-          }></div>
+          }
+        ></div>
         <div
           className={
             darkTheme ? styles.oval2 : `${styles.oval2} ${styles.bgBlack}`
-          }></div>
+          }
+        ></div>
         <div
           className={
             darkTheme ? styles.oval3 : `${styles.oval3} ${styles.bgBlack}`
-          }></div>
+          }
+        ></div>
       </div>
       <div className={styles.firstContent}>
         <div className={styles.firstContentLeft}>
           <span
             className={
               darkTheme ? styles.hi : `${styles.hi} ${styles.colBlack}`
-            }>
+            }
+          >
             Hi !
           </span>{" "}
           <br />
@@ -44,26 +52,32 @@ const Home = () => {
               darkTheme
                 ? styles.headNext
                 : `${styles.headNext} ${styles.colBlack}`
-            }>
+            }
+          >
             <b style={{ fontSize: "50px" }}>I</b>'m Aren
           </span>
           <br />
           <a href={CV} download>
-            <button className={styles.cvBut}
+            <button
+              className={styles.cvBut}
               style={{
                 background: darkTheme ? "white" : "rgb(36,36,36)",
                 color: darkTheme ? "rgb(36,36,36)" : "white",
-              }}>
+              }}
+            >
               Download CV
             </button>
           </a>
         </div>
         <div className={styles.firstContentRight}>
           <img
-            style={{ borderRadius: darkTheme ? "20px 20px 0 0" : null }}
-            className={styles.avatar}
-            src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/98381915/original/88c2f61d8b8c88d91030e19d12ca832c72b1b99d/design-minimalist-flat-line-vector-avatar-of-you.jpg"
-            alt=""
+            style={{
+              borderRadius: darkTheme && "20px  0 20px 0",
+              padding: darkTheme && "20px 20px 0 0",
+              borderColor: darkTheme && "white",
+            }}
+            className={styles.avatar} 
+            src={avatar}
           />
         </div>
       </div>
@@ -73,13 +87,15 @@ const Home = () => {
             darkTheme
               ? `${styles.skillsHead}`
               : `${styles.skillsHead} ${styles.colBlack}`
-          }>
+          }
+        >
           Skills
         </h1>
         <div className={styles.Skillscontent}>
           <div
             className={`${styles.col} ${styles.topSkill}`}
-            style={{ borderColor: darkTheme ? "white" : "rgb(36, 36, 36)" }}>
+            style={{ borderColor: darkTheme ? "white" : "rgb(36, 36, 36)" }}
+          >
             <ul className={styles.skill}>
               <li>
                 <span className={`${styles.expand} ${styles.html5}`}></span>
@@ -109,21 +125,24 @@ const Home = () => {
             <ul className={styles.skill}>
               <li>
                 <span
-                  className={`${styles.expand} ${styles.git} ${styles.rightSkill}`}></span>
+                  className={`${styles.expand} ${styles.git} ${styles.rightSkill}`}
+                ></span>
                 <em className={!darkTheme ? styles.colBlack : null}>
                   Git / GitHub
                 </em>
               </li>
               <li>
                 <span
-                  className={`${styles.expand} ${styles.ts} ${styles.rightSkill}`}></span>
+                  className={`${styles.expand} ${styles.ts} ${styles.rightSkill}`}
+                ></span>
                 <em className={!darkTheme ? styles.colBlack : null}>
                   TypeScript
                 </em>
               </li>
               <li>
                 <span
-                  className={`${styles.expand} ${styles.redux} ${styles.rightSkill}`}></span>
+                  className={`${styles.expand} ${styles.redux} ${styles.rightSkill}`}
+                ></span>
                 <em className={!darkTheme ? styles.colBlack : null}>Redux</em>
               </li>
             </ul>
@@ -132,13 +151,15 @@ const Home = () => {
       </div>
       <div
         id="contacts"
-        className={`${styles.webContainer} ${styles.contacts}`}>
+        className={`${styles.webContainer} ${styles.contacts}`}
+      >
         <h1
           className={
             darkTheme
               ? `${styles.skillsHead}`
               : `${styles.skillsHead} ${styles.colBlack}`
-          }>
+          }
+        >
           Contacts
         </h1>
         <div className={styles.contactsCont}>
@@ -153,7 +174,8 @@ const Home = () => {
           </a>
           <a
             target="_blank"
-            href="https://www.linkedin.com/in/aren-qochinyan-45b93924b/">
+            href="https://www.linkedin.com/in/aren-qochinyan-45b93924b/"
+          >
             <img src={In} alt="" />
           </a>
         </div>
